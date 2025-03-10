@@ -1,20 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%
-    String name = request.getParameter("name");
+	String name = request.getParameter("name");
+	String bloodType = request.getParameter("bloodType");
 %>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>O형 성격 분석</title>
+<title>Insert title here</title>
 </head>
 <body>
-    <h1>안녕하세요, <%= name %>님!</h1>
-    <h2>O형 성격 유형</h2>
-    <p>O형은 활발하고 리더십이 강한 성격을 가지고 있습니다.</p>
-    <p>사교성이 뛰어나며, 낙천적인 성향을 보입니다.</p>
-  
+<b><%=name %></b>님의 혈액형은 <b><%=bloodType %></b>형이고 성격은
+강한 의지의 소유자입니다.
 </body>
 </html>

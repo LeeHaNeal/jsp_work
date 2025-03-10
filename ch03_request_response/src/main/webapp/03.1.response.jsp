@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-	String name = request.getParameter("name");
-	String blood = request.getParameter("bloodType");
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:forward page='<%=blood + ".jsp" %>'/>
+<h1>Reponse Ex1</h1>
+<h3>sendRedirect 예제입니다.</h3>
+<%
+	response.sendRedirect("03.2.response.jsp");
+%>
+
 </body>
 </html>
