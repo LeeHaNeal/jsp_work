@@ -3,21 +3,14 @@
 <jsp:useBean id="mDao" class="ch08.MemberDao" />
 <%
 	String id = request.getParameter("id");
-	String pwd = request.getParameter("pwd");
+	boolean result = mDao.chickId(id);
 	
-	String msg = "로그인에 실패했습니다.";
-	
-	boolean result = mDao.loginMember(id, pwd);
 	if(result) {
-		session.setAttribute("idKey", id);
-		msg = "로그인에 성공 하였습니다.";
+		out.print(id + "는 사용할 수 없습니다<p/>");
+	} else {
+		out.print(id + "는 사용 가능 합니다<p/>");
 	}
 %>
-<script>
-	alert("<%=msg %>");
-	location.href = "login.jsp";
-</script>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +18,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<a href="" onclick="self.close()">닫기</a>
 </body>
 </html>
